@@ -83,23 +83,7 @@ export function Main() {
   /*here i handle score based on correct and incorrect answer
   - and i save the answer to display to user in the end 
    */
-  // const HandleScore = () => {
-  //   let Newscore = userscore;
-  //   let incorrect = incorrectanswer;
 
-  //   if (useranswer === currentQuestion.correct_choice) {
-  //     dispatch(userScore((Newscore += currentQuestion.degree)));
-  //     dispatch(correctAnswer(currentQuestion));
-  //   } else if (useranswer != currentQuestion.correct_choice) {
-  //     if (useranswer === null) {
-  //     } else {
-  //       dispatch(QuizIncorrectAnswer((incorrect += 1)));
-  //       dispatch(incorrectAnswer(currentQuestion));
-  //     }
-  //   } else {
-  //     console.log(`done ${Newscore}`);
-  //   }
-  // };
   const HandleScore = () => {
     let newScore = userscore;
     let incorrectCount = incorrectanswer;
