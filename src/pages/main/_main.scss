@@ -1,0 +1,126 @@
+/*start main style */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url(../src/images/bg.png);
+  background-color: rgb(26, 59, 137);
+  background-size: cover;
+  padding: 50px 25px;
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff5c;
+  }
+  .main-section {
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    .avater-questions {
+      display: flex;
+      flex-wrap: wrap;
+      .avater {
+        flex-basis: 30%;
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .question {
+        flex-basis: 70%;
+        color: white;
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+        }
+        h3 {
+          border: 2px solid white;
+          padding: 19px;
+          border-radius: 6px;
+          font-size: x-large;
+        }
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          grid-gap: 65px 25px;
+          margin-top: 70px;
+          padding: 0;
+          li {
+            label {
+              background-color: white;
+              color: gray;
+              padding: 10px 35px;
+              border-radius: 12px;
+              opacity: 0.7;
+              transition: 1s;
+              width: 60%;
+              display: inline-block;
+              cursor: pointer;
+              &:hover {
+                opacity: 1;
+                font-weight: 900;
+              }
+            }
+          }
+        }
+        button {
+          padding: 10px 25px;
+          margin-top: 60px;
+          border-radius: 7px;
+          box-shadow: 1px 1px 10px 0px grey;
+          border: none;
+          position: relative;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            background-color: #0c4b81;
+            width: 0;
+            height: 20px;
+            border-radius: 50%;
+            transform: translateY(-50%);
+          }
+          &::before {
+            left: -30px;
+          }
+          &::after {
+            right: -30px;
+          }
+
+          &:hover::before,
+          &:hover::after {
+            border-radius: 7px;
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+            z-index: -1;
+          }
+          &:hover::before {
+            left: 0;
+          }
+          &:hover::after {
+            right: 0;
+          }
+          &:hover {
+            color: white;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+/*end main style*/
